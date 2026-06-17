@@ -45,7 +45,7 @@
 
     body {
       overflow-x: hidden;
-      min-height: 100vh;
+      min-height: 100dvh;
       line-height: 1.6;
     }
 
@@ -404,7 +404,7 @@
        SECTION 1: HERO
        ═══════════════════════════════════════════ */
     .hero-section {
-      min-height: 100vh;
+      min-height: 100dvh;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -1321,6 +1321,79 @@
       .reveal {
         opacity: 1 !important;
         transform: none !important;
+      }
+    }
+
+    /* ═══════════════════════════════════════════
+       MOBILE RESPONSIVENESS OVERRIDES (< 768px & < 576px)
+       ═══════════════════════════════════════════ */
+    @media (max-width: 768px) {
+      .hero-profile {
+        margin-top: 30px;
+      }
+      .profile-container {
+        transform: scale(0.85);
+      }
+      .hero-title {
+        font-size: clamp(3rem, 10vw, 5rem);
+      }
+      .section-title {
+        font-size: clamp(2rem, 6vw, 3rem);
+      }
+      .about-visual {
+        transform: scale(0.9);
+      }
+    }
+
+    @media (max-width: 576px) {
+      .hero-section {
+        padding-top: 100px;
+        gap: 30px;
+      }
+      .hero-title {
+        font-size: clamp(2.2rem, 12vw, 3.2rem) !important;
+      }
+      .hero-subtitle-container {
+        font-size: 0.95rem;
+        height: auto;
+      }
+      .hero-bio {
+        font-size: 0.9rem;
+      }
+      .hero-actions {
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+      }
+      .hero-actions .btn {
+        width: 100%;
+      }
+      .profile-container {
+        transform: scale(0.65);
+        margin: -50px 0;
+      }
+      .stats-container {
+        grid-template-columns: 1fr !important;
+        gap: 30px;
+      }
+      .stat-item::after {
+        display: none !important;
+      }
+      section {
+        padding: 60px 5% 50px;
+      }
+      .contact-title {
+        font-size: 1.6rem;
+      }
+      .contact-subtitle {
+        font-size: 0.9rem;
+      }
+      .contact-btn {
+        padding: 14px 18px;
+        font-size: 0.8rem;
+      }
+      .footer-container {
+        gap: 20px;
       }
     }
   </style>
